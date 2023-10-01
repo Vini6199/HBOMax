@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
+
+:root {
+    --primary-color: #020228;
+    --secondary-color: #ff00e5;
+    --tertiary-color: #b535f6;
+    --btn-bg-color-gradient: linear-gradient(45deg,
+            #9b34ef 0%,
+            #490cb0 20%,
+            transparent 50%);
+    --btn-link-bg-color: #fff;
+    --btn-link-color: #000;
+    --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
+    --divider-bg-color: linear-gradient(90deg,
+            #5516ba,
+            rgba(255, 0, 229, 0.5) 80%);
+    --nav-bg-color: rgba(0, 0, 0, 0.3);
+    --text-color: #fff;
+    --link-color: #9e86ff;
+    --form-bg-color: rgba(211, 211, 211, 0.06);
+    --form-field-bg-color: rgba(0, 0, 0, 0.2);
+    --form-field-border: 1px solid rgba(255, 255, 255, 0.7);
+    --form-field-placeholder: rgba(255, 255, 255, 0.7);
+    --form-field-error: rgb(255, 76, 76);
+
+    scroll-behavior: smooth;
+}
+
+/* Custom Scroll */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--tertiary-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+body {
+    background: #370c3a;
+    background-image: url('images/background-movies-series.png');
+    font-family: "Raleway", sans-serif;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    margin: 0.1px;
+    display: flex;
+    flex-direction: column;
+}
+
+nav img {
+    height: 1.7rem;
+    object-fit: contain;
+    margin-left: 15px;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    padding: 8px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background: var(--nav-bg-color);
+}
+
+.menu {
+    padding: 0px 37px 0 0;
+    display: flex;
+    gap: 28px;
+    align-items: center;
+}
+
+.menu a,
+button {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 0.75rem;
+    letter-spacing: 0.12rem;
+    margin-top: 5px;
+}
+
+.menu button {
+    background: #9b34ef;
+    padding: 8px 27px;
+    border-radius: 30px;
+    border: none;
+    transition: background 1.5s, color 1.5s;
+}
+
+.menu button:hover {
+    background-color: #fff;
+    color: black;
+    cursor: pointer;
+    animation-fill-mode: forwards;
+}
+
+.content {
+    margin: 110px auto;
+    display: flex;
+    width: 100%;
+    max-width: 750px;
+    height: 100%;
+    max-height: 410px;
+    padding: 0 50px;
+    background: var(--form-bg-color);
+    flex-direction: column;
+}
+
+.container p:nth-of-type(1){
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+}
+
+.container p:nth-of-type(2) {
+    text-align: left;
+    margin:40px 0 30px 0;
+}
+
+.content form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.content input {
+    padding: 1.1rem;
+    border: 2px solid gray;
+    border-radius: 10px;
+    background: rgb(0, 0, 0, 0.2);
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-family: "Raleway";
+}
+
+.content input:not(:placeholder-shown):invalid {
+    border-color: var(--form-field-error);
+}
+
+.content input:valid{
+    border: 2px solid gray;
+}
+
+.error {
+    font-size: 1rem;
+    display: none;
+}
+
+.content input:not(:placeholder-shown):invalid + span {
+    display: block;
+    margin-top: 5px;
+}
+
+.login {
+    display: flex;
+    margin-top: 50px;
+    gap: 24px;
+}
+
+.login button {
+    background: linear-gradient(45deg,
+            #9b34ef 0%, #490cb0 20%, transparent 50%);
+    font-size: 0.9rem;
+    letter-spacing: 3-2px;
+    padding: 1em 4em;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 1.5s ease, background 1s;
+    background-size: 250%;
+    font-weight: bold;
+    font-family: "Raleway";
+}
+
+.login button:hover {
+    transform: scale(1.1);
+    border:2px solid #490cb0;
+    background-position: 100%;
+}
+
+.login a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+footer {
+    margin: auto;
+    display: block;
+    text-align: center;
+    justify-content: center;
+}
+
+footer a {
+    margin: 0 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: var(--link-color);
+    transition: color 0.3s ease-in;
+}
+
+footer a:hover {
+    color: white;
+}
+
+footer p {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    font-family: 'Quicksand';
+    color: var(--link-color);
+}
+
+.logos_sites {
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.logos_sites img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}

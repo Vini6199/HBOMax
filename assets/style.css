@@ -1,0 +1,484 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
+
+:root {
+    --primary-color: #020228;
+    --secondary-color: #ff00e5;
+    --tertiary-color: #b535f6;
+    --btn-bg-color-gradient: linear-gradient(45deg,
+            #9b34ef 0%,
+            #490cb0 20%,
+            transparent 50%);
+    --btn-link-bg-color: #fff;
+    --btn-link-color: #000;
+    --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
+    --divider-bg-color: linear-gradient(90deg,
+            #5516ba,
+            rgba(255, 0, 229, 0.5) 80%);
+    --nav-bg-color: rgba(0, 0, 0, 0.3);
+    --text-color: #fff;
+    --link-color: #9e86ff;
+    --form-bg-color: rgba(211, 211, 211, 0.06);
+    --form-field-bg-color: rgba(0, 0, 0, 0.2);
+    --form-field-border: 1px solid rgba(255, 255, 255, 0.7);
+    --form-field-placeholder: rgba(255, 255, 255, 0.7);
+    --form-field-error: rgb(255, 76, 76);
+
+    scroll-behavior: smooth;
+}
+
+/* Custom Scroll */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--tertiary-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+body {
+    background: linear-gradient(-45deg, #370c3a, #0f0f10, #271e6e);
+    background-size: 400% 400%;
+    animation: bg-animation 10s ease infinite alternate;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    color: var(--text-color);
+    margin: 0%;
+}
+
+@keyframes bg-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 50% 80%;
+    }
+
+    70% {
+        background-position: 80% 100%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+
+}
+
+
+* {
+    margin: 0%;
+    font-family: "Raleway", sans-serif;
+    color: white;
+}
+
+nav img {
+    height: 1.7rem;
+    object-fit: contain;
+    margin-left: 15px;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    padding: 8px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background: var(--nav-bg-color)
+}
+
+.menu {
+    padding: 0px 37px 0 0;
+    display: flex;
+    gap: 28px;
+    align-items: center;
+}
+
+.menu a,
+button {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 0.75rem;
+    letter-spacing: 0.12rem;
+    margin-top: 5px;
+}
+
+.menu button {
+    background: #9b34ef;
+    padding: 8px 27px;
+    border-radius: 30px;
+    border: none;
+    transition: background 1.5s, color 1.5s;
+}
+
+.menu button:hover {
+    background-color: #fff;
+    color: black;
+    cursor: pointer;
+    animation-fill-mode: forwards;
+}
+
+.assin {
+    margin: 110px auto;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.logos {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 40px;
+    justify-content: center;
+}
+
+.logos img {
+    object-fit: contain;
+}
+
+.assin p:nth-of-type(1) {
+    font-size: 2rem;
+}
+
+.assin p:nth-of-type(2) {
+    font-weight: bold;
+    font-size: 3rem;
+    margin-bottom: 2.5rem;
+}
+
+.divider {
+    width: 700px;
+    height: 5px;
+    background: -webkit-linear-gradient(45deg, #5516ba, darkblue);
+    border-radius: 10px;
+    margin-bottom: 35px
+}
+
+.assin p:nth-of-type(3) {
+    font-family: "Quicksand";
+    font-size: 1.25rem;
+}
+
+.assin p:nth-of-type(4) {
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.assin span:nth-of-type(1) {
+    font-size: 1.05rem;
+    font-weight: 100;
+}
+
+.mexe {
+    margin-top: 45px;
+    background: linear-gradient(45deg,
+            #9b34ef 0%, #490cb0 20%, transparent 50%);
+    font-size: 1rem;
+    letter-spacing: 5px;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 30px;
+    animation: wiggle 1.5s infinite ease 2s forwards;
+    cursor: pointer;
+    transition: background 1s ease;
+    background-size: 250%;
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0);
+    }
+
+    10% {
+        transform: rotate(-15deg)
+    }
+
+    20% {
+        transform: rotate(10deg);
+    }
+
+    30% {
+        transform: rotate(-15deg);
+    }
+
+    40% {
+        transform: rotate(10deg);
+    }
+
+    50% {
+        transform: rotate(-10deg);
+    }
+
+    60%,
+    100% {
+        transform: rotate(0);
+    }
+
+}
+
+.mexe:hover {
+    background-color: transparent;
+    background-position: 100%;
+    border: 2px solid #9b34ef;
+    padding: 15px 28px;
+}
+
+.assin p:nth-of-type(5) {
+    margin-top: 50px;
+    font-family: "Quicksand";
+    margin-bottom: 100px;
+}
+
+
+
+.plans {
+    margin: auto;
+    padding: 24px;
+    text-align: center;
+    width: auto;
+    background-image: url('images/background-movies-series.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.plans p:nth-child(1) {
+    margin-top: 9rem;
+    font-size: 2rem;
+}
+
+.cards {
+    margin-top: 4rem;
+    display: flex;
+    gap: 7rem;
+    justify-content: center;
+    perspective-origin: top;
+}
+
+
+.card1,
+.card2 {
+    max-width: 27rem;
+    padding: 3rem;
+    background: var(--card-bg-color);
+    border-radius: 10px;
+    text-align: left;
+    word-wrap: break-word;
+    transition: transform 1s ease-in-out;
+}
+
+.card1 p,
+.card2 p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.card1 p::before,
+.card2 p::before {
+    content: "+ ";
+    position: relative;
+    bottom: 5px;
+    right: 5px;
+    font-size: 30px;
+}
+
+.card1 span:nth-child(1),
+.card2 span:nth-child(1) {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 7.7rem;
+}
+
+.card1 span:nth-child(2),
+.card2 span:nth-child(2) {
+    font-size: 2.3rem;
+    color: #9e86ff;
+    font-weight: 900;
+}
+
+.button-card {
+    text-wrap: wrap;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(45deg,
+            #9b34ef 0%, #3a0891 50%);
+    padding: 1rem 3rem;
+    letter-spacing: 0.3rem;
+    transition: background 1s ease-in-out, color 1s ease-in, transform 1.5s ease;
+}
+
+.card1 button {
+    margin: 30% auto 0 0;
+}
+
+.card2 button {
+    margin: 7% auto 0 0;
+}
+
+.card1:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.card2:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.button-card:hover {
+    cursor: pointer;
+    background: white;
+    color: #000;
+    border: 3px solid #3a0891;
+    transform: scale(1.1, 1.1);
+}
+
+.container {
+    margin: 100px 180px;
+    text-align: center;
+}
+
+.container span {
+    font-size: 2rem;
+}
+
+
+.contents__container {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.contents__card {
+    border-radius: 16px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid transparent;
+    transition: transform 0.8s, border 1s;
+}
+
+.contents__card:hover {
+    transform: scale(1.05);
+    border: 2px solid var(--tertiary-color);
+}
+
+.contents__image:hover {
+    opacity: 0;
+}
+
+.contents__image {
+    width: 100%;
+    object-position: center;
+    transition: opacity 2s;
+}
+
+.contents__card:nth-child(1):hover {
+    background-image: url("images/hbo-hover_0.webp");
+}
+
+.contents__card:nth-child(2):hover {
+    background-image: url("images/MAX-Hover.webp");
+}
+
+.contents__card:nth-child(3):hover {
+    background-image: url("images/DC-Hover.webp");
+}
+
+.contents__card:nth-child(4):hover {
+    background-image: url("images/WB-Hover.webp");
+}
+
+
+.contents__card:nth-child(5):hover {
+    background-image: url("images/CN-Hover.png");
+}
+
+.contents__card:nth-child(6):hover {
+    background-image: url("images/UCL-Hover.webp");
+}
+
+footer {
+    margin: 9rem auto 0 0;
+    display: block;
+    text-align: center;
+}
+
+footer a {
+    margin: 0 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: var(--link-color);
+    transition: color 0.3s ease-in;
+}
+
+footer a:hover {
+    color: white;
+}
+
+footer p {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    font-family: 'Quicksand';
+    color: var(--link-color);
+}
+
+.logos_sites {
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.logos_sites img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 300px){
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar {
+        display: block;
+    }
+
+    nav{
+        position: relative;
+        display: block;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card1, .card2 {
+        display: block;
+    }
+
+    .container {
+        text-align: center;
+    }
+
+    .conatiner span{
+        display: flex; 
+
+    }
+}
